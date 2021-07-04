@@ -30,14 +30,7 @@
     <form action="{% url "read-later" %}" method="POST">
       {% csrf_token %}
       <input type="hidden" value="{{ post.id }}" name="post_id">
-      <button>Read Later
-      </button>
-    </form>
-  </div>
-  {% comment %} <div id="read-later">
-    <form action="{% url "read-later" %}" method="POST">
-      {% csrf_token %}
-      <input type="hidden" value="{{ post.id }}" name="post_id">
+      <input type="hidden" value="{{ post.slug }}" name="post_slug">
       <button>
         {% if saved_for_later %}
           Remove from "Read Later" List
@@ -46,7 +39,7 @@
         {% endif %}
       </button>
     </form>
-  </div> {% endcomment %}
+  </div>
   <article>
     <img src="{{ post.image.url }}" alt="{{ post.title }}" />
     {% comment %} <img src="{% static 'blog/images/'|add:post.image %}" alt="{{ post.title }}" /> {% endcomment %}

@@ -14,9 +14,8 @@
     <header id="main-navigation">
         <h1><a href="{% url "starting-page" %}">VK' Blog</a></h1>
         <nav>
-        {% comment %} <a href="{% url "read-later" %}">Stored Posts</a> {% endcomment %}
+        <a href="{% url "read-later" %}">Stored Posts</a>
         <a href="{% url "posts-page" %}">All Posts</a>
-        {% comment %} <a href="">Stored Posts</a> {% endcomment %}
         </nav>
     </header>
     {%block page_body%}{%endblock%}

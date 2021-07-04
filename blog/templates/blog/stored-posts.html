@@ -1,7 +1,7 @@
-{% extends "base.html" %}
+{% extends "base_template.html" %}
 {% load static %}
 
-{% block title %} 
+{% block page_title %} 
 My Stored Posts
 {% endblock %} 
 
@@ -9,7 +9,8 @@ My Stored Posts
 <link rel="stylesheet" href="{% static "blog/stored-posts.css" %}">
 {% endblock %}
 
-{% block content %}
+{% block page_body %}
+  <h1>Stored Posts</h1>
   <section id="stored-posts">
     {% if not has_posts %}
       <p>You didn't save any posts for later.</p>
